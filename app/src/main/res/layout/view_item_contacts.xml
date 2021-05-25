@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_s"
+        android:clickable="true"
+        android:onClick="onContactClick">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_rowSpan="2"
+                android:layout_gravity="center"
+                android:padding="@dimen/padding_s"
+                android:src="@drawable/ic_baseline_person_24"/>
+
+            <TextView
+                android:id="@+id/contactsViewItem_nameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_s"
+                android:text="Name"/>
+            <TextView
+                android:id="@+id/contactsViewItem_emailTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_s"
+                android:text="Email"/>
+        </GridLayout>
+    </com.google.android.material.card.MaterialCardView>
+</FrameLayout>

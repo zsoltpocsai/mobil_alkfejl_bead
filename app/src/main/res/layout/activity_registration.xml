@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_m"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_l"
+        android:text="Registration"
+        android:textSize="@dimen/text_size_header"
+        android:textAlignment="center"/>
+    <EditText
+        android:id="@+id/registration_nameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_m"
+        android:hint="Name"/>
+    <EditText
+        android:id="@+id/registration_emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_m"
+        android:inputType="textEmailAddress"
+        android:hint="Email"/>
+    <EditText
+        android:id="@+id/registration_passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_m"
+        android:inputType="textPassword"
+        android:hint="Password"/>
+    <Button
+        android:id="@+id/registration_submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:onClick="onSubmitClick"/>
+</LinearLayout>

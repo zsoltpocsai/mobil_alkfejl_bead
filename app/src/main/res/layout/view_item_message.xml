@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/messageViewItem_containerCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_s"
+        android:clickable="true"
+        android:focusable="true">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:columnCount="5"
+            android:rowCount="3">
+
+            <ImageView
+                android:id="@+id/messageViewItem_letterImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowSpan="2"
+                android:layout_margin="@dimen/margin_s"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_baseline_email_24"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_s"
+                android:text="From:"/>
+            <TextView
+                android:id="@+id/messageViewItem_senderTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_s"
+                android:text="Sender"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_s"
+                android:text="To:"/>
+            <TextView
+                android:id="@+id/messageViewItem_receiverTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_s"
+                android:text="Receiver"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_s"
+                android:text="Subject:"/>
+            <TextView
+                android:id="@+id/messageViewItem_subjectTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="3"
+                android:padding="@dimen/padding_s"
+                android:text="Subject"/>
+
+            <LinearLayout
+                android:id="@+id/messageViewItem_contentHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/messageViewItem_contentTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_m"
+                    android:text="Content"/>
+
+                <TextView
+                    android:id="@+id/messageViewItem_dateTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewEnd"
+                    android:padding="@dimen/margin_s"
+                    android:text="Date"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/messageViewItem_answerButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_s"
+                        android:text="Answer"/>
+                    <Button
+                        android:id="@+id/messageViewItem_deleteButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_s"
+                        android:text="Delete"/>
+                </LinearLayout>
+            </LinearLayout>
+        </GridLayout>
+    </com.google.android.material.card.MaterialCardView>
+</FrameLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_received"
+        android:title="Received messages"
+        android:icon="@drawable/ic_baseline_email_24"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/menu_sent"
+        android:title="Sent messages"
+        android:icon="@drawable/ic_baseline_send_24"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/menu_contacts"
+        android:title="Contacts"
+        android:icon="@drawable/ic_baseline_contacts_24"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/menu_logout"
+        android:title="Logout"
+        android:icon="@drawable/ic_baseline_logout_24"
+        app:showAsAction="ifRoom"/>
+</menu>
