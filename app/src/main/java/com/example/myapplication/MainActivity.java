@@ -42,7 +42,7 @@ public class MainActivity extends BaseActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         messages = new ArrayList<>();
-        messagesAdapter = new MessagesAdapter(messages, messageType);
+        messagesAdapter = new MessagesAdapter(messages);
         recyclerView.setAdapter(messagesAdapter);
 
         Intent intent = getIntent();
@@ -56,8 +56,10 @@ public class MainActivity extends BaseActivity {
 
         if (messageType == MessageType.SENT) {
             setAppBarTitle("Sent messages");
+            messagesAdapter.setMessageType(MessageType.SENT);
         } else {
             setAppBarTitle("Received messages");
+            messagesAdapter.setMessageType(MessageType.RECEIVED);
         }
     }
 

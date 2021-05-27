@@ -27,9 +27,8 @@ public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.ViewHo
     private List<CommunicationMessage> messages;
     private MainActivity.MessageType messageType;
 
-    public MessagesAdapter(List<CommunicationMessage> messages, MainActivity.MessageType messageType) {
+    public MessagesAdapter(List<CommunicationMessage> messages) {
         this.messages = messages;
-        this.messageType = messageType;
     }
 
     @Override
@@ -48,6 +47,10 @@ public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.ViewHo
     @Override
     public int getItemCount() {
         return messages.size();
+    }
+
+    public void setMessageType(MainActivity.MessageType type) {
+        this.messageType = type;
     }
 
     protected MainActivity.MessageType getMessageType() {
@@ -108,7 +111,8 @@ public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.ViewHo
                     contentHolder.setVisibility(View.GONE);
                 } else {
                     contentHolder.setVisibility(View.VISIBLE);
-                    if (message.getState() == CommunicationMessage.CommunicationMessageStateType.inProgress) {
+                    if (adapter.getMessageType() != MainActivity.MessageType.SENT
+                            && message.getState() == CommunicationMessage.CommunicationMessageStateType.inProgress) {
                         message.setState(CommunicationMessage.CommunicationMessageStateType.completed);
                         messageService.updateState(message);
                         toggleLetterIcon(message);
