@@ -24,7 +24,7 @@ public class MessageActivity extends Activity {
 
     private Sender sender;
     private Receiver recipient;
-    private TextView recipientView;
+    private EditText recipientView;
     private EditText subjectInput;
     private EditText contentInput;
 
@@ -48,9 +48,9 @@ public class MessageActivity extends Activity {
             intent.getStringExtra(RECIPIENT_NAME_KEY),
             intent.getStringExtra(RECIPIENT_EMAIL_KEY)
         );
-        recipientView = findViewById(R.id.recipient_view);
-        subjectInput = findViewById(R.id.subject_input);
-        contentInput = findViewById(R.id.content_input);
+        recipientView = findViewById(R.id.messageActivity_recipientEditText);
+        subjectInput = findViewById(R.id.messageActivity_subjectEditText);
+        contentInput = findViewById(R.id.messageActivity_contentEditText);
 
         if (auth.getCurrentUser() != null) {
             userService.getAppUser(auth.getCurrentUser().getEmail()).addOnSuccessListener(appUser -> {

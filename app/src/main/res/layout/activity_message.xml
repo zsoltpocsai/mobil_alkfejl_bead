@@ -18,7 +18,7 @@
         android:layout_marginTop="@dimen/margin_m"
         android:text="Recipient"/>
     <EditText
-        android:id="@+id/recipient_view"
+        android:id="@+id/messageActivity_recipientEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:enabled="false"
@@ -30,7 +30,7 @@
         android:layout_marginTop="@dimen/margin_m"
         android:text="Subject"/>
     <EditText
-        android:id="@+id/subject_input"
+        android:id="@+id/messageActivity_subjectEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -40,7 +40,7 @@
         android:layout_marginTop="@dimen/margin_m"
         android:text="Content"/>
     <EditText
-        android:id="@+id/content_input"
+        android:id="@+id/messageActivity_contentEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
